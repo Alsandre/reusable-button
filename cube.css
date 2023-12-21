@@ -2,7 +2,7 @@ body {
   background-color: #5e5b5b;
 }
 
-.container1 {
+.canvas {
   background-color: #ecd0d0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -10,59 +10,28 @@ body {
   height: 500px;
   width: 500px;
   margin: 50px auto;
-  position: relative;
 }
 
-.wrapper {
+.container {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
-}
-
-.w1 {
   perspective: 1000px;
-}
-
-.cube {
-  background-color: #fff;
-  margin: 1.5em auto;
   transform-style: preserve-3d;
-  transform: rotateX(-40deg) rotateY(32deg);
+  transform: rotateX(-40deg) rotateY(12deg);
 }
 
-.side {
+.surface {
+  background: tomato;
   position: absolute;
   width: 128px;
-  height: 128px;
-  background: rgba(255, 99, 71, 0.6);
-  background: tomato;
-}
-
-.front {
-  transform: translateZ(64px);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(64px);
-  perspective: 1000px;
+  height: 300px;
+  transform: rotateX(90deg);
   transform-style: preserve-3d;
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(64px);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(64px);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(64px);
-}
-
-.back {
-  transform: rotateY(-180deg) translateZ(64px);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .button {
