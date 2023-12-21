@@ -5,67 +5,124 @@ body {
 .canvas {
   background-color: #ecd0d0;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  height: 500px;
-  width: 500px;
+  height: 1000px;
+  width: 1000px;
   margin: 50px auto;
 }
 
 .container {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
+  width: 400px;
+  height: 610px;
+  padding: 10px;
+  grid-column-start: 3;
+  grid-row-start: 2;
   grid-row-end: 4;
-  perspective: 1000px;
+  perspective: 1700px;
   transform-style: preserve-3d;
-  transform: rotateX(-40deg) rotateY(12deg);
+  transform: rotateX(-40deg) rotateY(25deg);
 }
 
 .surface {
-  background: tomato;
+  background: rgb(117, 95, 91);
   position: absolute;
-  width: 128px;
-  height: 300px;
+  width: 400px;
+  height: 459px;
   transform: rotateX(90deg);
   transform-style: preserve-3d;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.2fr 1fr 0.2fr 1fr 1fr;
+}
+
+.button1 {
+  transform-style: preserve-3d;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  width: 100px;
+  height: 75px;
+}
+
+.button2 {
+  transform-style: preserve-3d;
+  grid-column-start: 2;
+  grid-row-start: 4;
+  width: 100px;
+  height: 75px;
+}
+
+.button3 {
+  transform-style: preserve-3d;
+  grid-column-start: 2;
+  grid-row-start: 6;
+  width: 100px;
+  height: 75px;
 }
 
 .button {
-  width: 50px;
-  height: 50px;
+  width: 94px;
+  height: 80px;
   background-color: #fff;
-  position: absolute;
-  top: 39px;
-  left: 39px;
-  transform: translateZ(30px);
+  transform: translateZ(10px);
 }
 
 .btn-front {
-  background-color: #948d8d;
-  transform-origin: 100% 100%;
-  transform: rotateX(90deg) translateY(30px);
+  background-color: #462a2a;
+  transform-origin: 0 0;
+  transform: rotateX(90deg) translatey(-70px);
 }
 
 .btn-left {
-  background-color: #462a2a;
+  background-color: #948d8d;
   transform-origin: 0 0;
-  transform: rotateY(90deg) translateX(-30px);
+  transform: translate3d(0, -160px, 10px) rotatey(90deg);
 }
 
-.pushedFace {
-  transform: translateZ(15px);
+.cover {
+  background-color: #eb9545;
 }
 
-.pushedFront {
-  transform: rotateX(90deg) translateY(15px);
+.cover_top {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
-.pushedLeft {
-  transform: rotateY(90deg) translateX(-15px);
+.cover_right {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+
+.cover_bottom {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+.cover_left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+
+.cover_middle__1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.cover_middle__2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
 }
 
 /*# sourceMappingURL=cube.css.map */
