@@ -1,0 +1,101 @@
+body {
+  background-color: #5e5b5b;
+}
+.container1 {
+    background-color: #ecd0d0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 500px;
+    width: 500px;
+    margin: 50px auto;
+    position: relative;
+}
+.wrapper {
+  //   width: 50%;
+//   background-color: #fff;
+grid-column-start: 2;
+grid-column-end: 3;
+grid-row-start: 3;
+grid-row-end: 4;
+}
+
+.w1 {
+  perspective: 1000px;
+}
+
+.cube {
+  //   font-size: 4em;
+  background-color: #fff;
+//   width: 150px;
+//   height: 150px;
+//   width: 64px;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform:  rotateX(-40deg) rotateY(32deg) ;
+  // transform: translateY(50px);
+}
+
+.side {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+
+  background: rgba(tomato, 0.6);
+  background: tomato;
+//   border: 50px solid rgba(0, 0, 0, 0.5);
+}
+
+.front {
+  transform: translateZ(64px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(64px);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.right {
+  transform: rotateY(90deg) translateZ(64px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(64px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(64px);
+}
+.back {
+  transform: rotateY(-180deg) translateZ(64px);
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  top: 39px;
+  left: 39px;
+  transform: translateZ(30px);
+}
+
+.btn-front {
+  background-color: #948d8d;
+  transform-origin: 100% 100%;
+  transform: rotateX(90deg) translateY(30px);
+}
+
+.btn-left {
+  background-color: #462a2a;
+  transform-origin: 0 0;
+  transform: rotateY(90deg) translateX(-30px);
+}
+
+.pushedFace {
+  transform: translateZ(15px);
+}
+.pushedFront {
+  transform: rotateX(90deg) translateY(15px);
+}
+
+.pushedLeft {
+  transform: rotateY(90deg) translateX(-15px);
+}

@@ -1,0 +1,39 @@
+body {
+    background-color: #837b7b;
+  }
+  #div1 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    margin-left: 60px;
+    border: 1px solid blue;
+    perspective: 100px;
+  }
+
+  #div2,
+  #div4 {
+    padding: 50px;
+    position: absolute;
+    border: 1px solid black;
+    background: rgba(100, 100, 100, 0.5);
+    transform-style: preserve-3d;
+  }
+
+  #div3 {
+    position: relative;
+    /* display: flex; */
+    height: 350px;
+    width: 350px;
+    margin-left: 60px;
+    border: 1px solid blue;
+    /* perspective: 100px; */
+  }
+  .panel {
+    perspective: 100px;
+  }
+  .preClick {
+    transform: rotateX(45deg);
+  }
+  .clicked {
+    transform: rotateX(45deg) translateZ(20px);
+  }
