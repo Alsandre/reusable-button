@@ -125,4 +125,15 @@ body {
   grid-row-end: 6;
 }
 
+.click {
+  animation: click;
+  animation-fill-mode: forwards;
+}
+
+@keyframes click {
+  to {
+    transform: translatez(-5px);
+  }
+}
+
 /*# sourceMappingURL=cube.css.map */

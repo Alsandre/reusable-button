@@ -114,3 +114,14 @@ body {
   grid-row-start: 5;
   grid-row-end: 6;
 }
+
+.click {
+    animation: click;
+    animation-fill-mode: forwards;
+}
+
+@keyframes click {
+    to {
+        transform: translatez(-5px);
+    }
+}
