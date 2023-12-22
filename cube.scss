@@ -114,3 +114,36 @@ body {
   grid-row-start: 5;
   grid-row-end: 6;
 }
+
+.btn-click_initial {
+  animation: click_initial;
+  animation-duration: 100ms;
+}
+
+.btn-click_subsequent {
+  animation: click_subsequent;
+  animation-duration: 100ms;
+}
+
+@keyframes click_initial {
+  from {
+    transform: translatez(0);
+  }
+  50% {
+    transform: translatez(-5px);
+  }
+  to {
+    transform: translatez(0);
+  }
+}
+@keyframes click_subsequent {
+  from {
+    transform: translatez(0);
+  }
+  50% {
+    transform: translatez(-5px);
+  }
+  to {
+    transform: translatez(0);
+  }
+}

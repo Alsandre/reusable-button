@@ -1,19 +1,16 @@
 function buttonClick(e) {
-  let btnClassList = e.target.classList;
-  let btnFrontClassList = document.getElementById("btn-front").classList;
-  let btnLeftClassList = document.getElementById("btn-left").classList;
+  let btnClassList = e.target.parentElement.classList;
 
-  btnClassList.contains("pushedFace")
-    ? btnClassList.remove("pushedFace")
-    : btnClassList.add("pushedFace");
+  if (
+    !btnClassList.contains("btn-click_initial") &&
+    !btnClassList.contains("btn-click_subsequent")
+  )
+    btnClassList.add("btn-click_initial");
+  else {
+    btnClassList.contains("btn-click_initial")
+      ? btnClassList.replace("btn-click_initial", "btn-click_subsequent")
+      : btnClassList.replace("btn-click_subsequent", "btn-click_initial");
+  }
 
-  btnFrontClassList.contains("pushedFront")
-    ? btnFrontClassList.remove("pushedFront")
-    : btnFrontClassList.add("pushedFront");
-
-  btnLeftClassList.contains("pushedLeft")
-    ? btnLeftClassList.remove("pushedLeft")
-    : btnLeftClassList.add("pushedLeft");
-
-    new Audio('assets/click.wav').play()
+  new Audio("assets/click.wav").play();
 }
