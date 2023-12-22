@@ -125,28 +125,17 @@ body {
   grid-row-end: 6;
 }
 
-.clickOdd {
+.btn-click_initial {
   animation: clickOdd;
   animation-duration: 100ms;
 }
 
-.clickEven {
+.btn-click_subsequent {
   animation: clickEven;
   animation-duration: 500ms;
 }
 
 @keyframes clickOdd {
-  from {
-    transform: translatez(0);
-  }
-  50% {
-    transform: translatez(-5px);
-  }
-  to {
-    transform: translatez(0);
-  }
-}
-@keyframes clickEven {
   from {
     transform: translatez(0);
   }

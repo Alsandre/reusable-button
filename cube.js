@@ -5,6 +5,5 @@ function buttonClick(e) {
   classList.contains("clickOdd")
     ? classList.replace("clickOdd", 'clickEven')
     : classList.replace("clickEven", 'clickOdd');
-  console.log(button);
   new Audio("assets/click.wav").play();
 }
