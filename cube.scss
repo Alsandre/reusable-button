@@ -115,13 +115,35 @@ body {
   grid-row-end: 6;
 }
 
-.click {
-    animation: click;
-    animation-fill-mode: forwards;
+.clickOdd {
+  animation: clickOdd;
+  animation-duration: 100ms;
 }
 
-@keyframes click {
-    to {
-        transform: translatez(-5px);
-    }
+.clickEven {
+  animation: clickEven;
+  animation-duration: 500ms;
+}
+
+@keyframes clickOdd {
+  from {
+    transform: translatez(0);
+  }
+  50% {
+    transform: translatez(-5px);
+  }
+  to {
+    transform: translatez(0);
+  }
+}
+@keyframes clickEven {
+  from {
+    transform: translatez(0);
+  }
+  50% {
+    transform: translatez(-5px);
+  }
+  to {
+    transform: translatez(0);
+  }
 }
