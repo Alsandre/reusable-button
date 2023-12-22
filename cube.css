@@ -126,16 +126,27 @@ body {
 }
 
 .btn-click_initial {
-  animation: clickOdd;
+  animation: click_initial;
   animation-duration: 100ms;
 }
 
 .btn-click_subsequent {
-  animation: clickEven;
-  animation-duration: 500ms;
+  animation: click_subsequent;
+  animation-duration: 100ms;
 }
 
-@keyframes clickOdd {
+@keyframes click_initial {
+  from {
+    transform: translatez(0);
+  }
+  50% {
+    transform: translatez(-5px);
+  }
+  to {
+    transform: translatez(0);
+  }
+}
+@keyframes click_subsequent {
   from {
     transform: translatez(0);
   }
