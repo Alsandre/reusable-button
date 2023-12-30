@@ -1,0 +1,10 @@
+👋 Welcome!
+
+Thanks for visiting! I'm [Your Name], a TypeScript developer. This site serves as a hub for my professional journey, highlighting my education, experience, and skills.
+
+Explore different sections to learn more. For details about me, head to the summary section. Any questions or just want to connect? Find my contact details below.
+
+Appreciate your visit!
+
+Best,
+[Your Name]
